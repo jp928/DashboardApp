@@ -10,22 +10,22 @@
 7. C3/D3
 
 ### How to run
-1. Go to the project folder by:
+#### * Go to the project folder by:
 ```console
 cd DashboardApp
 ```
 
-2. Install node dependencies:
+#### * Install node dependencies:
 ```console
 npm install
 ```
 
-3. Install javascript depencies:
+#### * Install javascript depencies:
 ```console
 bower install
 ```
 
-4. Run the application: 
+#### * Run the application: 
 ```console
 gulp serve
 ```
