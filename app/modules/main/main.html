@@ -1,0 +1,142 @@
+<md-toolbar layout="row" class="md-whiteframe-z1">
+    <img src="../../style/img/luma-logo.png" hide-sm>
+    <!-- empty element to force button on the right -->
+    <span flex></span>
+    <md-button class="menu" ng-click="MainCtrl.toggleSideNav()" aria-label="Show User List">
+        <img src="../../style/img/ic_menu_black_24px.svg">
+    </md-button>
+</md-toolbar>
+<md-content layout="row" layout-wrap flex>
+    <div layout="column" flex="100">
+        <div class="custom-subheader" layout="row" layout-wrap flex="32">
+            <div flex="25" class="img-container" hide-md hide-sm>
+                <img src="../../style/img/cottee-logo.png">
+            </div>
+            <div layout-margin flex>
+                <h1>Cottee's Dashboard</h1>
+                <md-button class="md-icon-button md-accent" aria-label="Update" ng-click="MainCtrl.updateCharts()">
+                    <img src="../../style/img/ic_refresh_black_24px.svg">
+                </md-button>
+                <span>Last updated: {{MainCtrl.updateDate | date: 'MMM d y h:mm:ss a'}}</span>
+            </div>
+            <div flex="35" class="img-container" hide-md hide-sm>
+                <img src="../../style/img/cottee-product-transparent-bg.png">
+            </div>
+        </div>
+        <div layout="row" layout-wrap flex>
+            <!-- Empty navbar as a placeholder -->
+            <md-sidenav class="site-sidenav md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+                <div></div>
+            </md-sidenav>
+
+            <!-- Contents start  -->
+            <md-content layout="column" flex>
+                <div layout="row" layout-wrap flex>
+
+                    <!-- The first section -->
+                    <section layout="row" flex="100" layout-wrap layout-padding>
+                        <div class="data-demo-container" flex>
+                            <div layout="row" flex="100" layout-margin>
+                                <div layout="column" flex="50">
+                                    <span layout-row flex><h2>Cottee's</h2></span>
+                                    <span layout-row flex>Sample Description about this brander here</span>
+                                </div>
+                                <div layout="column" flex="50">
+                                    <span flex>
+                                        <md-button class="md-raised md-warn md-hue-2" aria-label="All Filters">
+                                            <img layout-margin src="../../style/img/ic_settings_white_24px.svg">
+                                            <span layout-margin>ALL FILTERS</span>
+                                        </md-button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="miscellaneous-data-container" layout="row" flex="100" layout-margin layout-md="column" layout-sm="column">
+                                <span layout="column" flex="20" layout-md="row" layout-sm="row" flex-md="100" flex-sm="100">
+                                    <span flex="100" flex-md="50" flex-sm="50">Valid respondents: </span>
+                                    <span flex="100" flex-md="50" flex-sm="50">90</span>
+                                </span>
+                                <span layout="column" flex="20" layout-md="row" layout-sm="row" flex-md="100" flex-sm="100">
+                                    <span flex="100" flex-md="50" flex-sm="50">Eliminated: </span>
+                                    <span flex="100">6</span>
+                                </span>
+                                <span layout="column" flex="20" layout-md="row" layout-sm="row" flex-md="100" flex-sm="100">
+                                    <span flex="100" flex-md="50" flex-sm="50">Flatlineers: </span>
+                                    <span flex="100">2</span>
+                                </span>
+                                <span layout="column" flex="20" layout-md="row" layout-sm="row" flex-md="100" flex-sm="100">
+                                    <span flex="100" flex-md="50" flex-sm="50">Inconsistensy: </span>
+                                    <span flex="100">4</span>
+                                </span>
+                                <span layout="column" flex="20" layout-md="row" layout-sm="row" flex-md="100" flex-sm="100">
+                                    <span flex="100" flex-md="50" flex-sm="50">Inconsistensy: </span>
+                                    <span flex="100">96</span>
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- The second section -->
+                    <section layout="row" layout-align="center center" flex="100" layout-wrap layout-padding>
+                        <div class="data-demo-container" flex>
+                            <div layout="row" flex="100">
+                                <div layout="column" flex="50">
+                                    <span layout-row flex><h2>Key Effective Ad measures</h2></span>
+                                </div>
+                                <div layout="column" flex="50">
+                                    <span flex>
+                                        <md-button class="md-raised md-warn md-hue-2" aria-label="Chart Filters">
+                                            <img layout-margin src="../../style/img/ic_settings_white_24px.svg">
+                                            <span layout-margin>CHART FILTERS</span>
+                                        </md-button>
+                                        <md-button class="md-raised md-warn md-hue-2" aria-label="Export">
+                                            <span layout-margin>EXPORT</span>
+                                        </md-button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div layout="row" flex="100">
+                                <span layout="column" flex="40" layout-align="center center">
+                                    <!-- Gauge chart directive. Pass scope data via attribute data -->
+                                    <gauge-chart data="MainCtrl.gaugeChartData1"></gauge-chart>
+                                    <span flex>Attention</span>
+                                    <span flex>Will you ad get noticed?</span>
+                                </span>
+                                <span flex></span>
+                                <span layout="column" flex="40" layout-align="center center">
+                                     <!-- Gauge chart directive. Pass scope data via attribute data -->
+                                    <gauge-chart data="MainCtrl.gaugeChartData2"></gauge-chart>
+                                    <span flex>Brand Bonding</span>
+                                    <span flex>How does the ad make viewers feel about the brand?</span>
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- The third section -->
+                    <section layout="row" layout-align="center center" flex="100" layout-wrap layout-padding>
+                        <div class="data-demo-container" flex>
+                            <div layout="row" flex="100">
+                                <div layout="column" flex="50">
+                                    <span layout-row flex><h2>Add + Impact Ranking</h2></span>
+                                    <span layout-row flex>When comparing this ad to the add+impact@ global database a tick indicates that this ad is in the top quartile of ads for that category.</span>
+                                </div>
+                                <div layout="column" flex="50">
+                                    <span flex>
+                                        <md-button class="md-raised md-warn md-hue-2" aria-label="Chart Filters">
+                                            <img layout-margin src="../../style/img/ic_settings_white_24px.svg">
+                                            <span layout-margin>CHART FILTERS</span>
+                                        </md-button>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Bar chart directive. Pass scope data via attribute data -->
+                            <div layout="row" flex="100" layout-align="center center">
+                                <bar-chart data="MainCtrl.barChartData"></bar-chart>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </md-content>
+        </div>
+    </div>
+</md-content>

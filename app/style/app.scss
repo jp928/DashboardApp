@@ -1,0 +1,65 @@
+md-toolbar.md-default-theme:not(.md-menu-toolbar),
+md-toolbar:not(.md-menu-toolbar) {
+    background-color: #ededed;
+    > span {
+        display: inline;
+        > .menu {
+            float: right;
+            // vertical-align: middle;
+            right: 15px;
+        }
+    }
+}
+
+button {
+    > img {
+        vertical-align: middle;
+    }
+}
+
+section {
+    min-height: 320px;
+}
+
+.data-demo-container {
+    padding: 15px 32px;
+    border-bottom: 2px solid #968b8b;
+    & button {
+        float: right;
+        min-height: 40px;
+    }
+    & h2 {
+        position: relative;
+        &:after {
+            content: '';
+            width: 60px;
+            height: 2px;
+            background: #df402a;
+            position: absolute;
+            left: 0px;
+            bottom: -4px;
+        }
+    }
+}
+
+.custom-subheader {
+    background-color: #f5f1ee;
+    min-height: 240px;
+}
+
+.img-container {
+    height: 240px;
+    line-height: 240px;
+    > img {
+        vertical-align: middle;
+        margin-left: 32px;
+    }
+}
+
+.miscellaneous-data-container {
+    margin-top: 80px;
+}
+
+.md-sidenav-left {
+    background-color: #3f4a50;
+}

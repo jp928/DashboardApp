@@ -1,0 +1,26 @@
+{
+  "name": "DashboardApp",
+  "version": "0.0.1",
+  "authors": [
+    "piaojingtai <piaojingtai@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.7",
+    "angular-animate": "~1.4.7",
+    "angular-aria": "~1.4.7",
+    "angular-material": "~0.11.4",
+    "angular-ui-router": "~0.2.15",
+    "c3": "~0.4.10",
+    "d3": "~3.5.6",
+    "lodash": "~3.10.1"
+  }
+}

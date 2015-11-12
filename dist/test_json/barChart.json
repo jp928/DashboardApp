@@ -1,0 +1,21 @@
+[{
+    "name": "Product Service",
+    "value": 0.38,
+    "info": "Cordial",
+    "ads": 37
+}, {
+    "name": "Brand",
+    "value": 0.72,
+    "info": "Cottees",
+    "ads": 15
+}, {
+    "name": "Country",
+    "value": 0.55,
+    "info": "Australia",
+    "ads": 1473
+}, {
+    "name": "Category",
+    "value": 0.57,
+    "info": "Cold drinks",
+    "ads": 324
+}]
